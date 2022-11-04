@@ -1,4 +1,4 @@
 const Sequelize = require('sequelize')
-let sequelize
+let sequelize;
 
 module.exports = sequelize
