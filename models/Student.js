@@ -1,4 +1,5 @@
-// requiring sequelize 
+// requiring sequelize
+const { Model, DataTypes } = require('sequelize');
 
 
 // Set params for students
