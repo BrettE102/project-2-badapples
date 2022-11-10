@@ -18,11 +18,23 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    role: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    subject: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    gradeTaught: {
+      type: DataTypes.INTEGER,
+      allowNUll: true,
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [4],
       },
     },
   },
