@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const { Teacher } = require('../../models')
 
@@ -7,3 +8,8 @@ const { Teacher } = require('../../models')
 
 
 module.exports = router;
+
+const router = require("express").Router();
+const { Course, StudentCourses, Student } = require("../../models");
+const withAuth = require("../../utils/auth");
+

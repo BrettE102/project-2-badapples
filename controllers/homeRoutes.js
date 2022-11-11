@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 // require models from models folder
 const withAuth = require('../utils/auth');
@@ -80,3 +81,10 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+const router = require("express").Router();
+const { Course, Student, StudentCourses, User } = require("../models");
+const withAuth = require("../utils/auth");
+
+router.get("/", async (req, res) => {});
+
