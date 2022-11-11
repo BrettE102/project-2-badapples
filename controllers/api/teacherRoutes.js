@@ -1,6 +1,6 @@
-
-const router = require('express').Router();
-const { Teacher } = require('../../models')
+const router = require("express").Router();
+const { Course, StudentCourses, Student } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // post route, try/catch on all routes
 
@@ -9,7 +9,5 @@ const { Teacher } = require('../../models')
 
 module.exports = router;
 
-const router = require("express").Router();
-const { Course, StudentCourses, Student } = require("../../models");
-const withAuth = require("../../utils/auth");
+
 
