@@ -1,21 +1,24 @@
-// requiring sequelize
-
-// Set params for students
-
-// export students model
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Student extends Model {}
+class Course extends Model {}
 
-Student.init({
+Course.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
   },
-  name: {
+  teacherId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "user",
+      key: "id",
+    },
+  },
+  courseName: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -26,7 +29,7 @@ Student.init({
   sequelize,
   timestamps: false,
   underscored: true,
-  modelName: "student",
+  modelName: "course",
 });
 
-module.exports = Student;
+module.exports = Course;
