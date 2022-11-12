@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
 //   }
 // });
 
-// GET a single Teacher
+// GET a single Teacher by id
 router.get("/:id", async (req, res) => {
   try {
     const teacherData = await Teacher.findByPk(req.params.id, {
@@ -60,7 +60,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// DELETE a Teacher
+// DELETE a Teacher by id
 router.delete("/:id", async (req, res) => {
   try {
     const teacherData = await Teacher.destroy({
