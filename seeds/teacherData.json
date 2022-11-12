@@ -1,6 +1,107 @@
 [
     {
-        "name":"Elon Musk",
-        "subjects":"Math , science" 
+        "name":"Mr. Feeny",
+        "teacherID": 1,
+        "subject":"Math",
+        "classroom":"Butterflys",
+        "gradeLevel":1
+    },
+    {
+        "name":"Mr. Kulkarni",
+        "id":2,
+        "subject":"Science",
+        "classroom":"Turtles",
+        "gradeLevel":1
+    },
+    {
+        "name":"Ms. Honey",
+        "id":3,
+        "subject":"Language Arts",
+        "classroom":"Zebras",
+        "gradeLevel":1
+    },
+    {
+        "name":"Mr. Stein",
+        "teacherID": 4,
+        "subject":"Math",
+        "classroom":"Centipedes",
+        "gradeLevel":2
+    },
+    {
+        "name":"Mrs. McGonagall",
+        "id":5,
+        "subject":"Science",
+        "classroom":"Snakes",
+        "gradeLevel":2
+    },
+    {
+        "name":"Mr. Escalante",
+        "id":6,
+        "subject":"Language Arts",
+        "classroom":"Giraffes",
+        "gradeLevel":2
+    },
+    {
+        "name":"Mr. Schneebly",
+        "teacherID": 7,
+        "subject":"Math",
+        "classroom":"Beetles",
+        "gradeLevel":3
+    },
+    {
+        "name":"Ms. Clarence",
+        "id":8,
+        "subject":"Science",
+        "classroom":"Chameleons",
+        "gradeLevel":3
+    },
+    {
+        "name":"Ms. Norbury",
+        "id":9,
+        "subject":"Language Arts",
+        "classroom":"Armadillos",
+        "gradeLevel":3
+    },
+    {
+        "name":"Mr. Clark",
+        "teacherID": 10,
+        "subject":"Math",
+        "classroom":"Bees",
+        "gradeLevel":4
+    },
+    {
+        "name":"Ms. Fizzle",
+        "id":11,
+        "subject":"Science",
+        "classroom":"Lizards",
+        "gradeLevel":4
+    },
+    {
+        "name":"Mr. Keating",
+        "id":12,
+        "subject":"Language Arts",
+        "classroom":"Badgers",
+        "gradeLevel":4
+    },
+    {
+        "name":"Ms. Vaughn",
+        "teacherID": 13,
+        "subject":"Math",
+        "classroom":"Dragonflys",
+        "gradeLevel":5
+    },
+    {
+        "name":"Mr. Snape",
+        "id":14,
+        "subject":"Science",
+        "classroom":"Crocodiles",
+        "gradeLevel":5
+    },
+    {
+        "name":"Mr. Larabee",
+        "id":15,
+        "subject":"Language Arts",
+        "classroom":"Dolphins",
+        "gradeLevel":5
     }
 ]
