@@ -1,33 +1,33 @@
 const User = require("./User");
-const StudentCourses = require("./StudentCourses");
+const Teacher = require("./Teacher");
 const Student = require("./Student");
-const Course = require("./Course");
+// const Course = require("./Course");
 
-User.hasMany(Course, {
+User.hasMany(Teacher, {
+  foreignKey: "userId",
+  onDelete: "CASCADE",
+});
+
+Teacher.belongsTo(User, {
+  foreignKey: "userId",
+});
+
+Teacher.hasMany(Student, {
   foreignKey: "teacherId",
   onDelete: "CASCADE",
 });
 
-Course.belongsTo(User, {
+Student.belongsTo(Teacher, {
   foreignKey: "teacherId",
 });
 
-Course.hasMany(StudentCourses, {
-  foreignKey: "courseId",
+User.hasMany(Student, {
+  foreignKey: "userId",
   onDelete: "CASCADE",
 });
 
-StudentCourses.belongsTo(Course, {
-  foreignKey: "courseId",
+Student.belongsTo(User, {
+  foreignKey: "userId",
 });
 
-Student.hasMany(StudentCourses, {
-  foreignKey: "studentId",
-  onDelete: "CASCADE",
-});
-
-StudentCourses.belongsTo(Student, {
-  foreignKey: "studentId",
-});
-
-module.exports = { User, Course, StudentCourses, Student };
+module.exports = { User, Teacher, Student };

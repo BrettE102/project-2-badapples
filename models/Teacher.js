@@ -1,40 +1,42 @@
 // requiring sequelize
 const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
-class StudentCourses extends Model {}
+class Teacher extends Model {}
 
 // Setting parameter rules for teachers
-StudentCourses.init({
+Teacher.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
   },
-  courseId: {
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  gradeLevel: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  classroom: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  userId: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: "course",
+      model: "user",
       key: "id",
     },
   },
-  studentId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: "student",
-      key: "id",
-    },
-  },
-  score: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
+
   sequelize,
   timestamps: false,
   underscored: true,
-  modelName: "studentCourses",
+  modelName: "teacher",
 });
 
-module.exports = StudentCourses;
+module.exports = Teacher;

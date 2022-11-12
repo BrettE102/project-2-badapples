@@ -1,7 +1,5 @@
 // requiring sequelize
 
-const { Model, DataTypes } = require('sequelize');
-
 // Set params for students
 
 // export students model
@@ -21,9 +19,33 @@ Student.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
-  gradeLevel: {
+  teacherId: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    references: {
+      model: "teacher",
+      key: "id",
+    },
+  },
+  mathScore: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+  },
+  scienceScore: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+  },
+  laScore: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+  },
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "user",
+      key: "id",
+    },
   },
   sequelize,
   timestamps: false,
