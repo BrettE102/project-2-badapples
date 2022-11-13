@@ -1,6 +1,52 @@
 [
     {
-        "name":"Elon Musk",
-        "subjects":"Math , science" 
+        "name":"Feeny",
+        "classroom":"Butterflys",
+        "gradeLevel":1
+    },
+    {
+        "name":"Kulkarni",
+        "classroom":"Turtles",
+        "gradeLevel":1
+    },
+    {
+        "name":"Stein",
+        "classroom":"Centipedes",
+        "gradeLevel":2
+    },
+    {
+        "name":"McGonagall",
+        "classroom":"Snakes",
+        "gradeLevel":2
+    },
+    {
+        "name":"Schneebly",
+        "classroom":"Beetles",
+        "gradeLevel":3
+    },
+    {
+        "name":"Clarence",
+        "classroom":"Chameleons",
+        "gradeLevel":3
+    },
+    {
+        "name":"Clark",
+        "classroom":"Bees",
+        "gradeLevel":4
+    },
+    {
+        "name":"Frizzle",
+        "classroom":"Lizards",
+        "gradeLevel":4
+    },
+    {
+        "name":"Vaughn",
+        "classroom":"Dragonflys",
+        "gradeLevel":5
+    },
+    {
+        "name":"Snape",
+        "classroom":"Crocodiles",
+        "gradeLevel":5
     }
 ]
