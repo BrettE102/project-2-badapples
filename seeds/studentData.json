@@ -1,350 +1,300 @@
 [
     {
         "name":"Kevin Faite",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Louis Kundley",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Derrick Powell",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Bret Kanders",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Jill Norton",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Jody Storker",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Brad Klark",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Kirt Magnozzi",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Howard Dass",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Leslie Dallach",
-        "gradeLevel":1,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Jeff Nurray",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Dave Glark",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Brian Silkins",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Barry Lesttade",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Andrea Fretcher",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Clarke McLee",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Doug Iaflate",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Luke Vrisebois",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Denise Pawgood",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Rob Maigle",
-        "gradeLevel":2,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Martin Licci",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Alanna Chantz",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Dave Cozlov",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Yan Vaumgat",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Luis Khura",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Paula Caramnov",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Joey Full",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Randy Clatt",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Ally Endrey",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Vanessa Dorefer",
-        "gradeLevel":3,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Grey Gubinsky",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Tim Biset",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Tony Smehrik",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Maggie Baglianeti",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Mike Lonan",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Kari Chaw",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Ray Ponda",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Danielle Elou",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Tara Shekield",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Damon Handberg",
-        "gradeLevel":4,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },    
     {
         "name":"Sandy Clantire",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"John Riazzu",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Jeff Enthony",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Wilhemina Gefferies",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Paula Ling",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Mike Truk",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Larry Nayes",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Kathy Gliver",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Mark Smoth",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 
     },
     {
         "name":"Olga Veers",
-        "gradeLevel":5,
         "mathScore": 100,
         "scienceScore": 100,
         "languageartsScore": 100 

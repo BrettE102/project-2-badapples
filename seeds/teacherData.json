@@ -1,107 +1,52 @@
 [
     {
-        "name":"Mr. Feeny",
-        "teacherID": 1,
-        "subject":"Math",
+        "name":"Feeny",
         "classroom":"Butterflys",
         "gradeLevel":1
     },
     {
-        "name":"Mr. Kulkarni",
-        "id":2,
-        "subject":"Science",
+        "name":"Kulkarni",
         "classroom":"Turtles",
         "gradeLevel":1
     },
     {
-        "name":"Ms. Honey",
-        "id":3,
-        "subject":"Language Arts",
-        "classroom":"Zebras",
-        "gradeLevel":1
-    },
-    {
-        "name":"Mr. Stein",
-        "teacherID": 4,
-        "subject":"Math",
+        "name":"Stein",
         "classroom":"Centipedes",
         "gradeLevel":2
     },
     {
-        "name":"Mrs. McGonagall",
-        "id":5,
-        "subject":"Science",
+        "name":"McGonagall",
         "classroom":"Snakes",
         "gradeLevel":2
     },
     {
-        "name":"Mr. Escalante",
-        "id":6,
-        "subject":"Language Arts",
-        "classroom":"Giraffes",
-        "gradeLevel":2
-    },
-    {
-        "name":"Mr. Schneebly",
-        "teacherID": 7,
-        "subject":"Math",
+        "name":"Schneebly",
         "classroom":"Beetles",
         "gradeLevel":3
     },
     {
-        "name":"Ms. Clarence",
-        "id":8,
-        "subject":"Science",
+        "name":"Clarence",
         "classroom":"Chameleons",
         "gradeLevel":3
     },
     {
-        "name":"Ms. Norbury",
-        "id":9,
-        "subject":"Language Arts",
-        "classroom":"Armadillos",
-        "gradeLevel":3
-    },
-    {
-        "name":"Mr. Clark",
-        "teacherID": 10,
-        "subject":"Math",
+        "name":"Clark",
         "classroom":"Bees",
         "gradeLevel":4
     },
     {
-        "name":"Ms. Frizzle",
-        "id":11,
-        "subject":"Science",
+        "name":"Frizzle",
         "classroom":"Lizards",
         "gradeLevel":4
     },
     {
-        "name":"Mr. Keating",
-        "id":12,
-        "subject":"Language Arts",
-        "classroom":"Badgers",
-        "gradeLevel":4
-    },
-    {
-        "name":"Ms. Vaughn",
-        "teacherID": 13,
-        "subject":"Math",
+        "name":"Vaughn",
         "classroom":"Dragonflys",
         "gradeLevel":5
     },
     {
-        "name":"Mr. Snape",
-        "id":14,
-        "subject":"Science",
+        "name":"Snape",
         "classroom":"Crocodiles",
-        "gradeLevel":5
-    },
-    {
-        "name":"Mr. Larabee",
-        "id":15,
-        "subject":"Language Arts",
-        "classroom":"Dolphins",
         "gradeLevel":5
     }
 ]
