@@ -1,15 +1,15 @@
 const router = require("express").Router();
 const { User, Student, Teacher } = require("../../models");
-const withAuth = require("../../utils/auth");
+// const withAuth = require("../../utils/auth");
 
 // GET all teachers and sort by ascendiing order
 router.get("/", async (req, res) => {
   try {
     const teacherData = await Teacher.findAll({
-      order: [
-        ["gradeLevel", "DSC"],
-        ["name", "ASC"],
-      ],
+      // order: [
+      //   ["gradeLevel", "DSC"],
+      //   ["name", "ASC"],
+      // ],
     });
     res.status(200).json(teacherData);
   } catch (err) {

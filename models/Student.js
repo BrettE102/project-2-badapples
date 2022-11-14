@@ -42,7 +42,7 @@ Student.init(
     },
     userId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
       references: {
         model: "user",
         key: "id",
@@ -52,6 +52,7 @@ Student.init(
   {
     sequelize,
     timestamps: false,
+    freezeTableName: true,
     underscored: true,
     modelName: "student",
   }
