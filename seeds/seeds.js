@@ -1,5 +1,5 @@
 const sequelize = require("../config/connection");
-const { Student, Teacher, User } = require("../models");
+const { Student, Teacher } = require("../models");
 
 const teacherSeedData = require("./teacherData.json");
 const studentSeedData = require("./studentData.json");
@@ -7,8 +7,8 @@ const studentSeedData = require("./studentData.json");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const teachers = await Teacher.bulkCreate(teacherSeedData);
-  const students = await Student.bulkCreate(studentSeedData);
+  const teacher = await Teacher.bulkCreate(teacherSeedData);
+  const student = await Student.bulkCreate(studentSeedData);
 
   process.exit(0);
 };
