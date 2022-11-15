@@ -1,7 +1,9 @@
 const router = require("express").Router();
 const { User } = require("../../models");
+const sequelize = require("../../config/connection");
+const withAuth = require("../../utils/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       // order: [
@@ -15,7 +17,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const userData = await User.create(req.body);
 

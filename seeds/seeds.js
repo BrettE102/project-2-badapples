@@ -28,7 +28,7 @@ const seedDatabase = async () => {
   for (const student of studentSeedData) {
     await Student.create({
       ...student,
-      // Attach a random reader ID to each book
+      // Attach a random  ID to each student
       teacherId: teacher[Math.floor(Math.random() * teacher.length)].id,
     });
   }
