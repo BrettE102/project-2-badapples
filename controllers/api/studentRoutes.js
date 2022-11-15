@@ -8,11 +8,39 @@ const { route } = require("./teacherRoutes");
 router.get("/", async (req, res) => {
   try {
     const studentData = await Student.findAll({
-      // order: [
-      //         ["gradeLevel", "DSC"],
-      //         ["name", "ASC"],
+      include: [{ model: Teacher }],
+      //   attributes: {
+      //     include: [
+      //       [
+      //         // Use plain SQL to add up the total mileage
+      //         sequelize.literal(
+      //           "(SELECT AVG(mathScore) FROM student WHERE student.teacherId = teacher.id)"
+      //         ),
+      //         "averageMath",
+      //         console.log(averageMath),
       //       ],
+      //       //   [
+      //       //     // Use plain SQL to add up the total mileage
+      //       //     sequelize.literal(
+      //       //       "(SELECT AVG(science_score) FROM student WHERE student.teacher_id = teacher.id)"
+      //       //     ),
+      //       //     "averageScience",
+      //       //   ],
+      //       //   [
+      //       //     // Use plain SQL to add up the total mileage
+      //       //     sequelize.literal(
+      //       //       "(SELECT AVG(la_score) FROM student WHERE student.teacher_id = teacher.id)"
+      //       //     ),
+      //       //     "averageLa",
+      //       //   ],
+      //     ],
+      //   },
     });
+    // order: [
+    //         ["gradeLevel", "DSC"],
+    //         ["name", "ASC"],
+    //       ],
+
     res.status(200).json(studentData);
   } catch (err) {
     res.status(400).json(err);
