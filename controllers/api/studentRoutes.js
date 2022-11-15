@@ -54,12 +54,34 @@ router.get("/:id", async (req, res) => {
       // JOIN with teacher
       include: [{ model: Teacher }, { model: User }],
     });
-
     if (!studentData) {
       res.status(404).json({ message: "No student found with this id!" });
       return;
     }
+    res.status(200).json(studentData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
+//Update a student
+router.put("/:id", async (req, res) => {
+  try {
+    const studentData = await Student.update(
+      {
+        teacherId: req.body.teacherId,
+        mathScore: req.body.mathScore,
+        scienceScore: req.body.scienceScore,
+        laScore: req.body.laScore,
+      },
+      {
+        where: { id: req.params.id },
+      }
+    );
+    if (!studentData) {
+      res.status(404).json({ message: "No student found with this id!" });
+      return;
+    }
     res.status(200).json(studentData);
   } catch (err) {
     res.status(500).json(err);
