@@ -28,7 +28,6 @@ router.get("/login", (req, res) => {
     res.redirect("/teachers");
     return;
   }
-
   res.render("login");
 });
 

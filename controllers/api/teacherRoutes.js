@@ -1,15 +1,16 @@
 const router = require("express").Router();
 const { User, Student, Teacher } = require("../../models");
-// const withAuth = require("../../utils/auth");
+const sequelize = require("../../config/connection");
+const withAuth = require("../../utils/auth");
 
 // GET all teachers and sort by ascendiing order
 router.get("/", async (req, res) => {
   try {
     const teacherData = await Teacher.findAll({
-      // order: [
-      //   ["gradeLevel", "DSC"],
-      //   ["name", "ASC"],
-      // ],
+      order: [
+        ["gradeLevel", "DESC"],
+        ["name", "ASC"],
+      ],
     });
     res.status(200).json(teacherData);
   } catch (err) {
@@ -32,7 +33,7 @@ router.get("/", async (req, res) => {
 // });
 
 // GET a single Teacher by id
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const teacherData = await Teacher.findByPk(req.params.id, {
       // JOIN with Student
