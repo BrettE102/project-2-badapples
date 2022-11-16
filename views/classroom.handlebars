@@ -5,3 +5,15 @@
 <!-- Query Teacher Name as H2 -->
 
 <!-- Query of Students associated with Classroom -->
+{{#each students as |student|}}
+<p>
+{{student.name}}
+</p>
+<h3>Teacher</h3>
+    {{#each student.teacher as |teacher|}}
+    <p>
+    {{teacher.name}}
+    </p>
+    {{/each}}
+{{/each}}
+
