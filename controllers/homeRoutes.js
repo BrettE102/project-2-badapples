@@ -23,10 +23,6 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/staff", (req, res) => {
-  res.render("staff");
-});
-
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -76,8 +72,32 @@ router.get("/classroom", async (req, res) => {
 
     res.render("classroom", {students});
     console.log(studentData);
+
   } catch (err) {
     console.log(err);
+    res.status(400).json(err);
+  }
+});
+
+// GET all teachers and sort by ascendiing order
+router.get("/teachers", async (req, res) => {
+  try {
+    const teacherData = await Teacher.findAll({
+      order: [
+        ["gradeLevel", "DESC"],
+        ["name", "ASC"],
+      ],
+    });
+
+    const teachers = teacherData.map(teacher => teacher.get({
+      plain: true
+    }));
+    console.log(teacher);
+
+    res.render("teachers", {teachers});
+    console.log(teacherData);
+
+  } catch (err) {
     res.status(400).json(err);
   }
 });

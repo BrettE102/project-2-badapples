@@ -1,0 +1,47 @@
+<!-- Query of all the Teachers in the School -->
+
+<div class='teacher-container'>
+  <div class='card-header col-md-10'>
+    <h2>
+     Staff
+    </h2>
+  </div>
+  {{#each teachers as |teacher|}}
+      <p>
+        Name: {{teacher.name}}
+      </p>
+      <p>
+        Classroom: {{teacher.classroom}}
+      </p>
+
+  {{/each}}
+  <div class='teacher-update-form'>
+    <h2>
+      Edit a Teacher!
+    </h2>
+    <form class='update-teacher-form'>
+      <label for='teacher_name'>
+        Teacher Name:
+      </label>
+      <br />
+      <textarea id='teacher_name' name='teacher_name' rows='2' cols='30'>
+        {{teacher.name}}
+      </textarea>
+      <br />
+      <label for='classroom_name'>
+        Classroom Name:
+      </label>
+      <br />
+      <textarea id='classroom_name' name='classroom_name' rows='5' cols='30'>
+        {{teacher.classroom}}
+      </textarea>
+      <br />
+      <br />
+      <button type='submit' value='Submit'>
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+<!-- This is the form for adding and updating a teacher -->
+<script src='/js/editStaff.js'></script>
