@@ -80,6 +80,7 @@ router.get("/classroom", async (req, res) => {
 });
 
 // GET all teachers and sort by ascendiing order
+
 router.get("/teachers", async (req, res) => {
   try {
     const teacherData = await Teacher.findAll({
@@ -92,10 +93,9 @@ router.get("/teachers", async (req, res) => {
     const teachers = teacherData.map(teacher => teacher.get({
       plain: true
     }));
-    console.log(teacher);
+    console.log(teachers);
 
-    res.render("teachers", {teachers});
-    console.log(teacherData);
+  res.render("teachers", {teachers});
 
   } catch (err) {
     res.status(400).json(err);
