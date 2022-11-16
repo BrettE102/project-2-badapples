@@ -3,21 +3,6 @@ const { User, Student, Teacher } = require("../../models");
 const sequelize = require("../../config/connection");
 const withAuth = require("../../utils/auth");
 
-// GET all teachers and sort by ascendiing order
-router.get("/", async (req, res) => {
-  try {
-    const teacherData = await Teacher.findAll({
-      order: [
-        ["gradeLevel", "DESC"],
-        ["name", "ASC"],
-      ],
-    });
-    res.status(200).json(teacherData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
 // GET a single Teacher by id, will also be route for classroom
 router.get("/:id", async (req, res) => {
   try {
