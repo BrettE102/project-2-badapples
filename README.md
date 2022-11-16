@@ -5,7 +5,7 @@ The back-end for this project was built using Express.js, Sequelize, MySQL, and 
 This is a full-stack application to view various students classes, grades and which teachers they are assigned to. In the teacher you can see the average grade of all the students taking said teachers class. There will be a principle/admin login to see all the teachers and their average, as well as all the students and their grades.
 
 # Table Of Contents
-[Title](#e-commerce-back-end)
+[Title](#School-Tracker)
 [Description](#description)
 [Installation](#installation)
 [Usage](#usage)
