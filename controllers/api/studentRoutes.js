@@ -6,7 +6,7 @@ const withAuth = require("../../utils/auth");
 const { route } = require("./teacherRoutes");
 
 // GET all students, sort by name and grade level
-router.get("/", async (req, res) => {
+router.get("/students", async (req, res) => {
   try {
     const studentData = await Student.findAll({
       include: [{ model: Teacher }],
@@ -38,6 +38,14 @@ router.get("/", async (req, res) => {
         ],
       },
     });
+
+    const students = studentData.map(student => student.get({
+      plain: true
+    }));
+    console.log(students);
+
+    res.render("students", {students});
+    console.log(studentData);
 
     res.status(200).json(studentData);
     console.log(studentData);

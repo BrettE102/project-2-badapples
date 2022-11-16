@@ -5,15 +5,43 @@
 <!-- Query Teacher Name as H2 -->
 
 <!-- Query of Students associated with Classroom -->
+<h2>Students</h2>
 {{#each students as |student|}}
 <p>
-{{student.name}}
+    {{student.name}}
 </p>
+
+<p>
+    {{student.teacher.name}}
+</p>
+
+<p>
+    {{student.teacher.classroom}}
+</p>
+
+<p>
+    {{student.mathScore}}
+</p>
+
+<p>
+    {{student.scienceScore}}
+</p>
+
+<p>
+    {{student.laScore}}
+</p>
+
+<p>
+    {{student.teacher.gradeLevel}}
+</p>
+
 <h3>Teacher</h3>
-    {{#each student.teacher as |teacher|}}
-    <p>
-    {{teacher.name}}
-    </p>
-    {{/each}}
+{{#each Teachers as |teacher|}}
+<p>
+{{teacher.name}}
+</p>
 {{/each}}
+{{/each}}
+
+
 

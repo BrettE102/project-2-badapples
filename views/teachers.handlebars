@@ -3,22 +3,18 @@
 <div class='teacher-container'>
   <div class='card-header col-md-10'>
     <h2>
-      &#127869 Staff
+     Staff
     </h2>
   </div>
   {{#each teachers as |teacher|}}
-    <div class='teacher col-md-5'>
       <p>
-        {{teacher.id}}.
-        {{teacher.teacher_name}}
+        Name: {{teacher.name}}
       </p>
-    </div>
-    <div class='col-md-7'>
+      
       <p>
-        Classroom:
-        {{classroom.name}}
+        Classroom: {{teacher.classroom}}
       </p>
-    </div>
+
   {{/each}}
   <div class='teacher-update-form'>
     <h2>
@@ -30,7 +26,7 @@
       </label>
       <br />
       <textarea id='teacher_name' name='teacher_name' rows='2' cols='30'>
-        {{teacher_name}}
+        {{teacher.name}}
       </textarea>
       <br />
       <label for='classroom_name'>
@@ -38,7 +34,7 @@
       </label>
       <br />
       <textarea id='classroom_name' name='classroom_name' rows='5' cols='30'>
-        {{classroom.name}}
+        {{teacher.classroom}}
       </textarea>
       <br />
       <br />

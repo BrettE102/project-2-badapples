@@ -4,7 +4,7 @@ const sequelize = require("../../config/connection");
 const withAuth = require("../../utils/auth");
 
 // GET all teachers and sort by ascendiing order
-router.get("/", async (req, res) => {
+router.get("/teachers", async (req, res) => {
   try {
     const teacherData = await Teacher.findAll({
       order: [
@@ -13,6 +13,15 @@ router.get("/", async (req, res) => {
       ],
     });
     res.status(200).json(teacherData);
+
+    const teachers = teacherData.map(teacher => teacher.get({
+      plain: true
+    }));
+    console.log(teachers);
+
+    res.render("teachers", {teachers});
+    console.log(teacherData);
+
   } catch (err) {
     res.status(400).json(err);
   }
@@ -33,7 +42,7 @@ router.get("/", async (req, res) => {
 // });
 
 // GET a single Teacher by id
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/teachers/:id", withAuth, async (req, res) => {
   try {
     const teacherData = await Teacher.findByPk(req.params.id, {
       // JOIN with Student

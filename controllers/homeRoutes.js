@@ -2,6 +2,7 @@ const router = require("express").Router();
 const {User, Student, Teacher} = require("../models");
 const withAuth = require("../utils/auth");
 const sequelize = require("../config/connection");
+const { route } = require("../controllers/api/teacherRoutes");
 
 // Use withAuth middleware to prevent access to route
 router.get("/", withAuth, async (req, res) => {
@@ -23,8 +24,25 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/staff", (req, res) => {
-  res.render("staff");
+router.get("/teachers", async (req, res) => {
+  try {
+    const teacherData = await Teacher.findAll({
+      order: [
+        ["gradeLevel", "DESC"],
+        ["name", "ASC"],
+      ],
+    });
+
+    const teachers = teacherData.map(teacher => teacher.get({
+      plain: true
+    }));
+    console.log(teachers);
+
+  res.render("teachers", {teachers});
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 router.get("/login", (req, res) => {
@@ -75,11 +93,13 @@ router.get("/classroom", async (req, res) => {
     console.log(students);
 
     res.render("classroom", {students});
-    console.log(studentData);
+    // console.log(studentData);
+
   } catch (err) {
     console.log(err);
     res.status(400).json(err);
   }
 });
+
 
 module.exports = router;

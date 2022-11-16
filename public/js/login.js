@@ -37,7 +37,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/staff");
+      document.location.replace("/classroom");
       //document.location.replace("/overview");
     } else {
       alert(response.statusText);
