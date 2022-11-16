@@ -5,7 +5,7 @@ const { User, Teacher, Student } = require("../../models");
 const withAuth = require("../../utils/auth");
 const { route } = require("./teacherRoutes");
 
-// GET all students, sort by name and grade level
+// GET all students, sort by name
 router.get("/", async (req, res) => {
   try {
     const studentData = await Student.findAll({
@@ -14,22 +14,18 @@ router.get("/", async (req, res) => {
       attributes: {
         include: [
           [
-            // Use plain SQL to add up the total mileage
             sequelize.literal(
               "(SELECT AVG(math_score) FROM student WHERE student.teacher_id = teacher.id)"
             ),
             "averageMath",
-            // console.log(averageMath),
           ],
           [
-            // Use plain SQL to add up the total mileage
             sequelize.literal(
               "(SELECT AVG(science_score) FROM student WHERE student.teacher_id = teacher.id)"
             ),
             "averageScience",
           ],
           [
-            // Use plain SQL to add up the total mileage
             sequelize.literal(
               "(SELECT AVG(la_score) FROM student WHERE student.teacher_id = teacher.id)"
             ),

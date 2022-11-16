@@ -18,22 +18,8 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET a single teacher
-// router.get("/:id", async (req, res) => {
-//   try {
-//     const teacherData = await Teacher.findByPk(req.params.id);
-//     if (!teacherData) {
-//       res.status(404).json({ message: "No Teacher with this id!" });
-//       return;
-//     }
-//     res.status(200).json(teacherData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-// GET a single Teacher by id
-router.get("/:id", withAuth, async (req, res) => {
+// GET a single Teacher by id, will also be route for classroom
+router.get("/:id", async (req, res) => {
   try {
     const teacherData = await Teacher.findByPk(req.params.id, {
       // JOIN with Student
@@ -61,6 +47,28 @@ router.post("/", async (req, res) => {
   }
 });
 
+//Update a Teacher
+router.put("/:id", async (req, res) => {
+  try {
+    const teacherData = await Teacher.update(
+      {
+        name: req.body.name,
+        classroom: req.body.name,
+      },
+      {
+        where: { id: req.params.id },
+      }
+    );
+    if (!teacherData) {
+      res.status(404).json({ message: "No teacher found with this id!" });
+      return;
+    }
+    res.status(200).json(teacherData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // DELETE a Teacher by id
 router.delete("/:id", async (req, res) => {
   try {
@@ -80,9 +88,5 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// post route, try/catch on all routes
-
-// findOne route
 
 module.exports = router;
