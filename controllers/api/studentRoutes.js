@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const sequelize = require("../../config/connection");
 const { json } = require("express");
 const { User, Teacher, Student } = require("../../models");
 const withAuth = require("../../utils/auth");
@@ -8,13 +9,40 @@ const { route } = require("./teacherRoutes");
 router.get("/", async (req, res) => {
   try {
     const studentData = await Student.findAll({
-      // order: [
-      //         ["gradeLevel", "DSC"],
-      //         ["name", "ASC"],
-      //       ],
+      include: [{ model: Teacher }],
+      order: [["name", "ASC"]],
+      attributes: {
+        include: [
+          [
+            // Use plain SQL to add up the total mileage
+            sequelize.literal(
+              "(SELECT AVG(math_score) FROM student WHERE student.teacher_id = teacher.id)"
+            ),
+            "averageMath",
+            // console.log(averageMath),
+          ],
+          [
+            // Use plain SQL to add up the total mileage
+            sequelize.literal(
+              "(SELECT AVG(science_score) FROM student WHERE student.teacher_id = teacher.id)"
+            ),
+            "averageScience",
+          ],
+          [
+            // Use plain SQL to add up the total mileage
+            sequelize.literal(
+              "(SELECT AVG(la_score) FROM student WHERE student.teacher_id = teacher.id)"
+            ),
+            "averageLa",
+          ],
+        ],
+      },
     });
+
     res.status(200).json(studentData);
+    console.log(studentData);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -26,12 +54,34 @@ router.get("/:id", async (req, res) => {
       // JOIN with teacher
       include: [{ model: Teacher }, { model: User }],
     });
-
     if (!studentData) {
       res.status(404).json({ message: "No student found with this id!" });
       return;
     }
+    res.status(200).json(studentData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
+//Update a student
+router.put("/:id", async (req, res) => {
+  try {
+    const studentData = await Student.update(
+      {
+        teacherId: req.body.teacherId,
+        mathScore: req.body.mathScore,
+        scienceScore: req.body.scienceScore,
+        laScore: req.body.laScore,
+      },
+      {
+        where: { id: req.params.id },
+      }
+    );
+    if (!studentData) {
+      res.status(404).json({ message: "No student found with this id!" });
+      return;
+    }
     res.status(200).json(studentData);
   } catch (err) {
     res.status(500).json(err);

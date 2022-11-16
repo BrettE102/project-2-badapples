@@ -3,7 +3,7 @@ const router = require("express").Router();
 const withAuth = require("../utils/auth");
 
 // Use withAuth middleware to prevent access to route
-router.get("/profile", withAuth, async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -28,7 +28,6 @@ router.get("/login", (req, res) => {
     res.redirect("/teachers");
     return;
   }
-
   res.render("login");
 });
 
